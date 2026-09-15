@@ -12,7 +12,7 @@ export default function HomePage() {
     <PhoneShell>
       <HomeHero />
 
-      <div className="relative z-10 -mt-2 px-5 pb-2">
+      <div className="relative z-10 px-5 pb-2 pt-8">
         <div className="space-y-3">
           <OrangeButton href="/menu">Menu</OrangeButton>
           <OrangeButton href={`tel:${BRAND.phone}`}>Contact</OrangeButton>

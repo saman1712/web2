@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Dela_Gothic_One, Poppins, Vazirmatn } from "next/font/google";
+import { Dela_Gothic_One, Lalezar, Poppins, Vazirmatn } from "next/font/google";
 import { BRAND, SITE_DESCRIPTION, SITE_TITLE } from "@/lib/brand";
 import "./globals.css";
 
@@ -7,6 +7,13 @@ const dela = Dela_Gothic_One({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-dela",
+  display: "swap",
+});
+
+const lalezar = Lalezar({
+  weight: "400",
+  subsets: ["arabic", "latin"],
+  variable: "--font-lalezar",
   display: "swap",
 });
 
@@ -62,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dela.variable} ${poppins.variable} ${vazirmatn.variable}`}>
+    <html lang="en" className={`${dela.variable} ${lalezar.variable} ${poppins.variable} ${vazirmatn.variable}`}>
       <body className="bg-sky text-ink antialiased">{children}</body>
     </html>
   );
