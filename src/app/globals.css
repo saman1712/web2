@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #f05323;
+  --sky: #c3d0e0;
+  --ink: #1e1e1e;
+  --cream: #ede4d4;
+  --xs-spacing: 18px;
+}
+
+html,
+body {
+  background: var(--sky);
+  color: var(--ink);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--sky);
+}
+
+/* Hide default scrollbars on the phone column, keep page scroll. */
+.phone-shell,
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.phone-shell::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scallop {
+  --c: 28px;
+  height: 56px;
+  background: radial-gradient(circle at 50% 0, var(--sky) 70%, transparent 71%);
+  background-size: var(--c) 56px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+}
+
+.diamond {
+  width: 28px;
+  height: 28px;
+  background: var(--cream);
+  transform: rotate(45deg);
+  border-radius: 3px;
+}
+
+.cloud-blob {
+  background: #dfe6ee;
+  filter: drop-shadow(0 8px 0 rgba(255, 255, 255, 0.15));
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-track {
+  animation: marquee-x 28s linear infinite;
+}
+
+.gallery-track:hover {
+  animation-play-state: paused;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
