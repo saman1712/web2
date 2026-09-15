@@ -29,22 +29,6 @@ export function Wordmark({
   );
 }
 
-export function HeroWordmark() {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <p
-        className="font-mark text-[64px] leading-none text-white"
-        style={{ textShadow: "0 2px 18px rgba(0,0,0,.35)" }}
-      >
-        {BRAND.name}
-      </p>
-      <p className="mt-1 font-display text-[12px] tracking-[0.46em] text-white">
-        {BRAND.subtitle}
-      </p>
-    </div>
-  );
-}
-
 export function CloudIcon({ className = "h-8 w-12 text-cloud" }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 40" className={className} aria-hidden="true">

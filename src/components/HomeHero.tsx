@@ -1,6 +1,5 @@
 "use client";
 
-import { HeroWordmark } from "@/components/BrandMarks";
 import { BRAND } from "@/lib/brand";
 
 export function HomeHero() {
@@ -17,11 +16,7 @@ export function HomeHero() {
         >
           <source src={BRAND.heroVideo} type="video/webm" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/20" />
-
-        <div className="relative z-10 flex h-full items-center justify-center px-6 pb-10">
-          <HeroWordmark />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/15" />
       </div>
 
       <div
