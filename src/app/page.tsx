@@ -34,7 +34,7 @@ export default function HomePage() {
             {BRAND.tagline}
           </p>
           <p className="mt-4 max-w-[320px] font-sans text-[15px] font-medium leading-6 text-ink">
-            {BRAND.name} Is A Modern{" "}
+            <span className="font-fa">{BRAND.name}</span> Is A Modern{" "}
             <span className="font-extrabold">French Café Bakery</span> Offering An Aesthetic And
             Nature-Inspired Escape, Merging Refined Taste With An Inspirational Vibe.
           </p>

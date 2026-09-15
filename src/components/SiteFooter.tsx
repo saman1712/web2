@@ -12,7 +12,8 @@ export function SiteFooter({ variant = "contact" }: Props) {
         <>
           <h3 className="font-display text-[28px] uppercase tracking-[-0.03em]">Join us</h3>
           <p className="mx-auto mt-2 max-w-[280px] font-sans text-[13px] leading-relaxed text-sky">
-            If you want to work with us in {BRAND.cafeEn}, go to the jobs page
+            If you want to work with us in{" "}
+            <span className="font-fa">{BRAND.name}</span> Cafe, go to the jobs page
           </p>
           <div className="mt-6 space-y-3">
             <OrangeButton href="/jobs" tone="sky">
@@ -27,7 +28,8 @@ export function SiteFooter({ variant = "contact" }: Props) {
         <>
           <h3 className="font-display text-[28px] uppercase tracking-[-0.03em]">Get in Touch</h3>
           <p className="mx-auto mt-2 max-w-[280px] font-sans text-[13px] leading-relaxed">
-            if you have any question or need reservation call {BRAND.cafeEn}
+            if you have any question or need reservation call{" "}
+            <span className="font-fa">{BRAND.name}</span> Cafe
           </p>
           <div className="mt-6">
             <OrangeButton href={`tel:${BRAND.phone}`} tone="sky">
@@ -37,12 +39,9 @@ export function SiteFooter({ variant = "contact" }: Props) {
         </>
       )}
 
-      <a href="https://shanomenu.com/" className="mt-8 block">
-        <p className="font-display text-[22px] uppercase tracking-[-0.03em] text-sky">
-          By Shanomenu
-        </p>
-        <p className="mt-1 font-sans text-[11px] text-sky/80">© 2026 ShanoMenu. Version 1.</p>
-      </a>
+      <p dir="rtl" className="mt-8 font-fa text-[16px] font-medium leading-8 text-sky">
+        ساخته شده توسط گروه طراحی ویژن
+      </p>
     </footer>
   );
 }

@@ -148,7 +148,7 @@ export function JobsForm() {
         <input name="area" className={field} />
       </label>
 
-      <OrangeButton type="submit" className="mt-4">
+      <OrangeButton type="submit" fa className="mt-4">
         {status === "sending" ? "..." : "ثبت درخواست"}
       </OrangeButton>
 

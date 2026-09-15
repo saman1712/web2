@@ -48,7 +48,7 @@ export function WelcomeDialog() {
             </p>
             <p className="mt-3 font-fa text-[16px] text-ink">با تشکر از همراهی شما</p>
             <div className="mt-8">
-              <OrangeButton onClick={dismiss}>متوجه شدم</OrangeButton>
+              <OrangeButton fa onClick={dismiss}>متوجه شدم</OrangeButton>
             </div>
           </motion.div>
         </motion.div>

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Dela_Gothic_One, Lalezar, Poppins, Vazirmatn } from "next/font/google";
+import localFont from "next/font/local";
+import { Dela_Gothic_One, Poppins } from "next/font/google";
 import { BRAND, SITE_DESCRIPTION, SITE_TITLE } from "@/lib/brand";
 import "./globals.css";
 
@@ -10,13 +11,6 @@ const dela = Dela_Gothic_One({
   display: "swap",
 });
 
-const lalezar = Lalezar({
-  weight: "400",
-  subsets: ["arabic", "latin"],
-  variable: "--font-lalezar",
-  display: "swap",
-});
-
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
@@ -24,10 +18,10 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const vazirmatn = Vazirmatn({
-  weight: ["400", "500", "700", "800"],
-  subsets: ["arabic", "latin"],
-  variable: "--font-vazirmatn",
+const estedad = localFont({
+  src: "../fonts/estedad-arabic-wght-normal.woff2",
+  weight: "100 900",
+  variable: "--font-estedad",
   display: "swap",
 });
 
@@ -69,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dela.variable} ${lalezar.variable} ${poppins.variable} ${vazirmatn.variable}`}>
+    <html lang="en" className={`${dela.variable} ${poppins.variable} ${estedad.variable}`}>
       <body className="bg-sky text-ink antialiased">{children}</body>
     </html>
   );

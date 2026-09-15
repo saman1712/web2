@@ -23,7 +23,7 @@ export function Wordmark({
   className?: string;
 }) {
   return (
-    <p className={`font-mark leading-none ${className}`} aria-label={BRAND.name}>
+    <p className={`font-fa leading-none ${className}`} aria-label={BRAND.name}>
       {BRAND.name}
     </p>
   );

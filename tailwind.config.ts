@@ -19,9 +19,8 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-dela)", "sans-serif"],
-        mark: ["var(--font-lalezar)", "var(--font-dela)", "sans-serif"],
         sans: ["var(--font-poppins)", "sans-serif"],
-        fa: ["var(--font-vazirmatn)", "Tahoma", "sans-serif"],
+        fa: ["var(--font-estedad)", "Tahoma", "sans-serif"],
       },
       maxWidth: {
         phone: "430px",

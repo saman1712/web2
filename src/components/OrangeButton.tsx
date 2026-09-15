@@ -20,6 +20,7 @@ type Props = {
   type?: "button" | "submit";
   onClick?: ComponentProps<"button">["onClick"];
   external?: boolean;
+  fa?: boolean;
 };
 
 export function OrangeButton({
@@ -30,12 +31,17 @@ export function OrangeButton({
   type = "button",
   onClick,
   external,
+  fa = false,
 }: Props) {
-  const classes = `flex w-full items-center justify-center rounded-[20px] px-8 py-[18px] font-display text-[24px] leading-none tracking-[-0.02em] transition-transform ${tones[tone]} ${className}`;
+  const classes = `flex w-full items-center justify-center rounded-[20px] px-8 py-[18px] leading-none transition-transform ${
+    fa
+      ? "font-fa text-[20px] font-semibold"
+      : "font-display text-[24px] tracking-[-0.02em]"
+  } ${tones[tone]} ${className}`;
 
   const inner = (
     <motion.span
-      className="block w-full text-center uppercase"
+      className={`block w-full text-center ${fa ? "" : "uppercase"}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
